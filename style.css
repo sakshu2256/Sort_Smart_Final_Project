@@ -1,0 +1,76 @@
+/* Smooth scroll */
+    html { scroll-behavior: smooth; }
+
+    /* Skeleton pulse animation */
+    @keyframes pulse-skeleton {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+    .skeleton { animation: pulse-skeleton 1.5s ease-in-out infinite; }
+
+    /* Confetti animation */
+    @keyframes confetti-fall {
+      0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+    }
+    .confetti-piece {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      animation: confetti-fall 3s ease-in forwards;
+      z-index: 9999;
+      pointer-events: none;
+    }
+
+    /* Mobile drawer slide */
+    @keyframes slideIn {
+      from { transform: translateX(-100%); }
+      to { transform: translateX(0); }
+    }
+    .drawer-open { animation: slideIn 0.3s ease forwards; }
+
+    /* Toast slide in */
+    @keyframes toastIn {
+      from { transform: translateX(100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    .toast-anim { animation: toastIn 0.3s ease forwards; }
+
+    /* Dark mode transitions */
+    * { transition: background-color 0.2s, color 0.2s, border-color 0.2s; }
+
+    /* Print styles */
+    @media print {
+      #navbar, #scan, #sell-scrap, #schemes, #discounts, #rewards, #impact, footer,
+      .no-print { display: none !important; }
+      #certificate { display: block !important; }
+    }
+
+    /* Donut chart */
+    .donut-chart { transform: rotate(-90deg); }
+    .donut-segment { transition: stroke-dashoffset 1s ease; }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #f1f1f1; }
+    ::-webkit-scrollbar-thumb { background: #2E7D32; border-radius: 3px; }
+
+    /* Hero gradient */
+    .hero-gradient {
+      background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 40%, #A5D6A7 100%);
+    }
+    .dark .hero-gradient {
+      background: linear-gradient(135deg, #1B5E20 0%, #2E7D32 40%, #388E3C 100%);
+    }
+
+    /* Confidence bar */
+    .confidence-bar-fill { transition: width 1s ease; }
+
+    /* Category chip bounce */
+    @keyframes chipBounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-4px); }
+    }
+    .chip-hover:hover { animation: chipBounce 0.4s ease; }
+
+    .dark body { background-color: #111827; color: #f9fafb; }

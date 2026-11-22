@@ -1,0 +1,1 @@
+{"version":2,"cleanUrls":true,"rewrites":[{"source":"/data/:match*","destination":"/data/:match*"},{"source":"/(.*)","destination":"/index.html"}]}
